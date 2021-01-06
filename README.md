@@ -6,6 +6,11 @@ $ sudo chmod -R 777 addons
 $ sudo chmod -R 777 etc
 ```
 
+Increase maximum number of files watching if you catch the error OSError: inotify watch limit reached with Odoo 14:
+```
+$ sudo sysctl fs.inotify.max_user_watches=500000
+```
+
 Start the container:
 ```
 $ docker-compose up
