@@ -11,11 +11,11 @@ Start the container:
 $ docker-compose up
 ```
 
-* Then open `localhost:8071` to access Odoo 13.0. If you want to start the server with a different port, change **8071** to another value:
+* Then open `localhost:9999` to access Odoo 13.0. If you want to start the server with a different port, change **9999** to another value:
 
 ```
 ports:
- - "8071:8069"
+ - "9999:8069"
 ```
 
 
@@ -37,11 +37,11 @@ To change Odoo configuration, edit file: **etc/odoo.conf**.
 
 # docker-compose.yml
 
-* odoo:latest
-* postgres:11.6
+* odoo:14
+* postgres:13
 * pgadmin4
 
-# Odoo 13 screenshots
+# Odoo 14 screenshots
 
 ![odoo13-start-screen.png](screenshots/odoo13-start-screen.png)
 
@@ -51,10 +51,10 @@ To change Odoo configuration, edit file: **etc/odoo.conf**.
 
 # Access to PgAdmin:
 
-You can use PgAdmin if you need. It's on port 5050 (127.0.0.1:5050 for example) and default credentials are:
+You can use PgAdmin if you need. It's on port 5080 (127.0.0.1:5080 for example) and default credentials are:
 
-* email: pgadmin4@pgadmin.org
-* password: admin
+* email: pgadmin
+* password: pgadmin
 
 If you don't need PgAdmin, you can comment or delete it in docker-compose.yml.
 
